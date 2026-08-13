@@ -1,0 +1,63 @@
+.contentb{
+    background-color: black;
+    
+    width: 95%;
+    margin: 15px auto 20px;
+    padding: 5px;
+}
+.content{
+    background-color: white;
+
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align:center;
+    flex-direction: column;
+
+    padding: 40px;
+}
+
+.content h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+
+    margin: 0 0 25px;
+
+    color: #9B111E;
+}
+
+.content p {
+     font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+}
+
+.content img {
+    width: 500px;
+    height: 300px;
+
+    object-fit: cover;
+
+    margin-top: 20px;
+
+    clip-path: polygon(
+        5% 0,
+        100% 0,
+        95% 100%,
+        0 100%
+    );
+}
+
+.content h1::after {
+    content: "";
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    background: #9B111E;
+
+    margin: 10px auto 0;
+}
