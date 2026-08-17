@@ -1,3 +1,4 @@
+@import url("responsiv.css");
 @import url("nav.css");
 @import url("banner.css");
 @import url("content.css");
@@ -19,5 +20,4 @@ body{
         #9B111E 100%
     );
 }
-
 

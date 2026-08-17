@@ -27,7 +27,7 @@
     width: 100%;
 
     background: white;
-   /* background-image: url('../banner.jpg');*/
+    background-image: url('../img/Banner/banner.jpg');
     background-size: cover;
 
     background-position: center;
@@ -43,24 +43,4 @@
     95% 0,
     100% 100%,
     7% 100%);
-}
-.banner h1{
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 50px;
-    letter-spacing: 2px;
-
-    margin: 0 0 25px;
-
-    color: #9B111E;
-}
-.banner h1::after {
-    content: "";
-    display: block;
-
-    width: 80px;
-    height: 4px;
-
-    background: #9B111E;
-
-    margin: 10px auto 0;
 }

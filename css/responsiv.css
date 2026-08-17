@@ -1,0 +1,54 @@
+@media (max-width: 768px){
+ 
+    .navborser{
+        width: 92%;
+    }
+    
+    .navbar{
+        height: auto;
+        min-height: 55px;
+    }
+
+    .navbar ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .navbar a{
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+      .contentb{
+
+        width: 92%;
+    }
+
+    .content{
+        padding: 25px 15px;
+    }
+
+     .banner{
+        min-height: 250px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .navbar a{
+        
+        font-size: 14px;
+        padding: 5px 7px;
+    }
+
+    .content h1{
+
+        font-size: 28px;
+    }
+
+    .content p{
+
+        font-size: 14px;
+    }
+}
