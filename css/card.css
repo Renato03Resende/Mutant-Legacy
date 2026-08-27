@@ -1,75 +1,108 @@
 .CardHerois{
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 2%;
+    border: 5px solid black;
+    box-sizing: border-box;
+
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 90%;
-    margin: 30px auto;
+    
+    
+}
+.CardOrigin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
 }
 .CardBase{
-    width: 100%;
-    height: 480px;
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    position: relative;
+
     padding: 5px;
-    margin: 30px 30px;
-    
-    background-color: azure;
-    border: solid;
-}
-.CardImg{
-    border: solid;
-    width: 100%;
-    height: 250px;
-}
-.CardImg img{
-    width: 100%;
-    height: 100%;
 
-    display: block;
-    margin: auto;
+    background-color:#000000;
+    box-shadow:
+    0 0 10px yellow,
+    0 0 20px #34ff02;
+}
+.CardBase::before{
+    content: "";
+
+    position: absolute;
+    inset: -4px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        transparent 0deg,
+        yellow 40deg,
+        #34ff02 70deg,
+        transparent 100deg
+    );
+
+    filter: blur(3px);
+
+    z-index: 1;
+
+    animation: girarRaio 2.5s linear infinite;
+}
+@keyframes girarRaio{
+    100%{
+        transform: rotate(360deg)
+    }
+}
+.CardBase img{
+    width: 96%;
+    height: 96%;
+    position: absolute;
+
+    top:2%;
+    left:2%;
+
+    border-radius: 50%;
     object-fit: cover;
-}
-.CardBase h3{
-    text-align: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-    
-    background: linear-gradient( to right, green 0%, yellow 100%);
 
-    -webkit-background-clip: text;
+    z-index: 1;
+}
+.name-hero{
+    width: 220px;
+    padding: 10px;
+
+    background-color: rgb(248, 246, 246);
+
+    border: 3px solid #34ff02;
+    border-radius: 10px;
+
+    text-align: center;
+
+    margin-top: -67px;
+
+    z-index: 2;
+}
+.name-hero h2{
+    margin: 0;
+
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+
+    background: linear-gradient(to right, green, yellow);
+
     background-clip: text;
+    -webkit-background-clip: text;
 
     color: transparent;
     -webkit-text-fill-color: transparent;
-
-    margin-bottom: 20px;
-}
-.CardBase h3::after{
-      content: "";
-    display: block;
-
-    width: 80px;
-    height: 4px;
-
-    background: #054e17;
-
-    margin: -10px auto 0;
-}
-
-.info-linha{
-    font-size: 20px;
-    font-family: 'Bebas Neue', sans-serif;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    /*margin-bottom:;*/
-}
-.titulo-info{
-    font-weight: bold;
-    white-space: nowrap;
-}
-.valor-info{
-    font-weight: normal;
 }

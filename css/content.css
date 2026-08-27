@@ -50,32 +50,16 @@
     width: 80%;
     height: auto;
     
-    border: 4px  #9b111e;
+    border: solid 4px  #9b111e;
 
-    animation: brilho 2s infinite alternate;
 }
 
 .img-xmen{
     width: 80%;
     height: auto;
     
-    border: 4px  #9b111e;
+    border: solid 4px  #9b111e;
 
-    animation: brilho 2s infinite alternate;
-}
-
-@keyframes brilho{
-    from{
-    box-shadow: 
-    0 0 5px #9b111e,
-    0 0 10px #9b111e;
-    }
-    to{
-        box-shadow:
-        0 0 15px #ffd500,
-        0 0 30px #9b111e,
-        0 0 45px #9B111E;
-    }
 }
 .content h1::after {
     content: "";
