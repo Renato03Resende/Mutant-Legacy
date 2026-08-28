@@ -16,93 +16,132 @@
     
     
 }
-.CardOrigin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 0;
-}
-.CardBase{
-    width: 300px;
-    height: 300px;
+.card{
+    width: 320px;
+    height: 500px;
 
-    border-radius: 50%;
+    perspective: 1000px;
+}
+.card-inner{
     position: relative;
 
-    padding: 5px;
+    width: 100%;
+    height: 100%;
 
-    background-color:#000000;
-    box-shadow:
-    0 0 10px yellow,
-    0 0 20px #34ff02;
+    overflow: visible;
+
+    border: 4px solid #ffd500;
+    border-radius: 20px;
+    
+    background: transparent;
+
+    transform-style: preserve-3d;
+
+    transition: transform 0.15s ease;
 }
-.CardBase::before{
-    content: "";
 
+.card-bg{
     position: absolute;
-    inset: -4px;
+    inset: 0;
 
-    border-radius: 50%;
+    border-radius: 16px;
 
-    background: conic-gradient(
-        transparent 0deg,
-        yellow 40deg,
-        #34ff02 70deg,
-        transparent 100deg
+    background: radial-gradient(
+        circle at center,
+        #1e4f30,
+        #07110b 70%,
+        #020604 100%
     );
 
-    filter: blur(3px);
+    z-index: 0;
 
-    z-index: 1;
-
-    animation: girarRaio 2.5s linear infinite;
+    transform: translateZ(-10px);
 }
-@keyframes girarRaio{
-    100%{
-        transform: rotate(360deg)
-    }
-}
-.CardBase img{
-    width: 96%;
-    height: 96%;
+.personagem{
     position: absolute;
 
-    top:2%;
-    left:2%;
+    right: -3px;
+    top: -3px;
 
-    border-radius: 50%;
-    object-fit: cover;
-
-    z-index: 1;
-}
-.name-hero{
-    width: 220px;
-    padding: 10px;
-
-    background-color: rgb(248, 246, 246);
-
-    border: 3px solid #34ff02;
-    border-radius: 10px;
-
-    text-align: center;
-
-    margin-top: -67px;
+    width: 90%;
+    height: auto;
 
     z-index: 2;
+
+   transform: translateZ(70px);
+
+   pointer-events: none;
+
+   transition: transform 0.15s ease;
 }
-.name-hero h2{
-    margin: 0;
+
+.card-info{
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    width: auto;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 0 0 16px 16px;
+
+    color: white;
+
+    z-index: 10;
+
+    transform: translateZ(100px);
+}
+
+.card-info h2{
+    margin: 0 0 15px;
 
     font-size: 30px;
-    text-transform: uppercase;
-    font-family: "Bebas Neue", sans-serif;
 
-    background: linear-gradient(to right, green, yellow);
+    color: #ffd500;
+}
 
-    background-clip: text;
-    -webkit-background-clip: text;
+.info-linha{
+    display: flex;
 
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    gap: 8px;
+
+    margin-bottom: 6px;
+
+    font-size: 18px;
+}
+
+.info-linha span:first-child{
+    white-space: nowrap;
+}
+
+.card-glow{
+    position: absolute;
+    inset: 0;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.35) 45%,
+        rgba(255, 213, 0, 0.25) 50%,
+        transparent 70%
+    );
+
+    opacity: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-glow{
+    opacity: 1;
 }
