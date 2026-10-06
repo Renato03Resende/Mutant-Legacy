@@ -41,3 +41,17 @@ card.addEventListener("mouseleave", function () {
 });
 });
 
+ fetch('./dados/personagens.json')
+ .then(response =>{
+    if (!response.ok){
+        throw new Error('Erro ao carregar o arquivo JSON');
+    }
+    return response.json();
+ })
+ .then(dados => {
+    console.log(dados);
+    console.log(dados[0].nome);
+    console.log(dados[0].poder);
+    console.log(dados[0].nivelPoder);
+ })
+ .catch(erro => console.error('Erro:', erro));
