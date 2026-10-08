@@ -50,8 +50,11 @@ card.addEventListener("mouseleave", function () {
  })
  .then(dados => {
     console.log(dados);
-    console.log(dados[0].nome);
-    console.log(dados[0].poder);
-    console.log(dados[0].nivelPoder);
+    
+    const container = document.querySelector(".CardHerois");
+    
+    const card = document.createElement("div");
+
+    container.append(card);
+    console.log(card);
  })
- .catch(erro => console.error('Erro:', erro));
