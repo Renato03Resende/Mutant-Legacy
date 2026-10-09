@@ -3,6 +3,21 @@
     "nomeCivil":"Anna Marie",
     "poder":"Absorção de poderes",
     "nivelPoder":"Omega",
-    "imagem":"../img/herois/Rogue.webp"
+    "imagem":"../img/herois/Rogue.webp",
+    "cor":"#134e2c",
+    "corGlow":"#e0115f"
 
-}]
+},
+   {
+    "nome": "Renato",
+    "nomeCivil": "Henrique",
+    "poder": "Super Paciencia",
+    "nivelPoder": "Omega",
+    "imagem":"../img/herois/cyclop.webp",
+    "cor":"#0a46a6",
+    "corGlow": "ffd500"
+}
+]
+
+
+ 
