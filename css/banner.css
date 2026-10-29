@@ -1,6 +1,8 @@
 .bborder{
-    width: 100%;
-    height: 400px;
+    width: 92%;
+    max-width: 1200px;
+    margin: 15px auto 20px;
+    height: clamp(240px, 30vw, 340px);
     padding: 5px;
 
     background-size: cover;
@@ -15,10 +17,7 @@
     0 0,
     95% 0,
     100% 100%,
-    7% 100%);
-
-    margin-top: 15px;
-    margin-bottom: 20px;
+    5% 100%);
 }
 .banner{
     position: relative;
@@ -44,7 +43,7 @@
     0 0,
     95% 0,
     100% 100%,
-    7% 100%);
+    5% 100%);
 }
 .banner::before{
   content: "";
@@ -67,6 +66,7 @@
   font-family: "Poppins", sans-serif;
   max-width: 400px;
   margin: 10px 0;
+  
 }
 .destaque{
   color: #ffffff;
@@ -75,14 +75,15 @@
   font-family: "Bebas Neue", sans-serif;
   color:#000000;
   font-size: 25px;
+  white-space: nowrap;
 
-  position: absolute;
+  position: relative;
   display: inline-block;
 
   background-color: #ffd500;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 5px 20px;
+  padding: 5px 40px;
 
   transition: 0.3s ease;
   clip-path: polygon(
@@ -92,13 +93,12 @@
     7% 100%);
 }
 .botao:hover{
-  color: #000000;
   transform: translateY(-2px);
 }
 .botao::after{
     content: "";
 
-    position: absolute;
+    position: relative;
     left: 50%;
     bottom: 4px;
 

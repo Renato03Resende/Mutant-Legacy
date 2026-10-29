@@ -32,6 +32,13 @@
      .banner{
         min-height: 250px;
     }
+    .secao{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .inversa img{
+        order:0;
+    }
 }
 
 @media(max-width: 480px){
@@ -50,5 +57,14 @@
     .content p{
 
         font-size: 14px;
+    }
+}
+@media(max-width: 480px){
+    .banner{
+        padding-left: 24px;
+        padding-right: 40px;
+    }
+    .botao{
+        font-size: 20px;
     }
 }

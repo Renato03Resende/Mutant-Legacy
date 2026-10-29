@@ -7,14 +7,9 @@
     padding: 5px;
 }
 .content{
-    background-color: white;
-
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    text-align:center;
-    flex-direction: column;
-
+    background-color: #071430;
+    color: #dfe6f3;
+    text-align:left;
     padding: 40px;
 }
 
@@ -22,10 +17,8 @@
     font-family: "Bebas Neue", sans-serif;
     font-size: 50px;
     letter-spacing: 2px;
-
     margin: 0 0 25px;
-
-    color: #9B111E;
+    color: #ffd500;
 }
 
 .content p {
@@ -33,34 +26,22 @@
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.3px;
+    color: #dfe6f3;
+    max-width: 65ch;
 }
 
 .content img {
-    width: 80%;
     height: auto;
-    
     display: block;
-    margin: 30px auto 0;
     object-fit: cover;
-
-    margin-bottom: 30px;
 }
 
-.img-mutantes{
-    width: 80%;
-    height: auto;
-    
+.img-mutantes, .img-xmen{
     border: solid 4px  #9b111e;
 
 }
 
-.img-xmen{
-    width: 80%;
-    height: auto;
-    
-    border: solid 4px  #9b111e;
 
-}
 .content h1::after {
     content: "";
     display: block;
@@ -70,5 +51,21 @@
 
     background: #9B111E;
 
-    margin: -10px auto 0;
+    margin: -10px 0 0;
+}
+.secao{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+.secao + .secao{
+    margin-top: 50px;
+}
+.secao img{
+    width: 100%;
+    margin: 0;
+}
+.inversa img{
+    order: -1;
 }
