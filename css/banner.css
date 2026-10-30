@@ -1,5 +1,5 @@
 .bborder{
-    width: 92%;
+    width: 80%;
     max-width: 1200px;
     margin: 15px auto 20px;
     height: clamp(240px, 30vw, 340px);

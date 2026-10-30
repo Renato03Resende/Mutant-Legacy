@@ -36,9 +36,18 @@
     object-fit: cover;
 }
 
-.img-mutantes, .img-xmen{
-    border: solid 4px  #9b111e;
 
+.img-mutantes{
+    clip-path: polygon(0 0,
+    100% 0,
+    92% 100%,
+    0 100%);
+}
+.img-xmen{
+    clip-path: polygon(8% 0,
+    100% 0,
+    100% 100%,
+    0 100%);
 }
 
 

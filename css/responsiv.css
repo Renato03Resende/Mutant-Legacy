@@ -39,6 +39,9 @@
     .inversa img{
         order:0;
     }
+    .bborder{
+        width: 92%;
+    }
 }
 
 @media(max-width: 480px){
